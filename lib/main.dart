@@ -1,5 +1,5 @@
 import 'package:custom_sliver/presentation/bloc/bloc/product_bloc.dart';
-import 'package:custom_sliver/presentation/screens/home/home_page.dart';
+import 'package:custom_sliver/presentation/screens/my_home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Custom Sliver App',
         home: MultiBlocProvider(providers: [
           BlocProvider(create: (context) => ProductBloc()),
-        ], child: const HomePage()));
+        ], child: const MyHomePage()));
   }
 }
