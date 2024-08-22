@@ -2,8 +2,15 @@
 
 import 'package:custom_sliver/core/data/model/product_model.dart';
 import 'package:custom_sliver/core/data/model/sets_model.dart';
+import 'package:flutter/material.dart';
 
-class CategoryModel {
+final class CustomCategoryModel {
+  CategoryModel? categoryModel;
+  GlobalKey? globalKey;
+  CustomCategoryModel({this.categoryModel, this.globalKey});
+}
+
+final class CategoryModel {
   int? id;
   String? name;
   String? description;
